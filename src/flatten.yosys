@@ -1,6 +1,6 @@
 read_verilog ./mkPICAMTop.v
 hierarchy -generate -libdir ${BLUESPEC}/lib/Verilog
 flatten 
-rename mkPICAMTop coralmw_mkPICAMTop
-synth -top coralmw_mkPICAMTop
-write_verilog coralmw_mkPICAMTop.v
+rename mkPICAMTop coralmw_mkPICAMInternal
+synth -top coralmw_mkPICAMInternal
+write_verilog coralmw_mkPICAMInternal.v
