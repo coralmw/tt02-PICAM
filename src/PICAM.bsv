@@ -4,9 +4,11 @@ import Vector :: *;
 
 `define CAM_SLOTS 32
 
+typedef Bit#(1) SBit;
+
 interface TopIfc;
-  method Action in(Vector#(6, Bit#(1)) in_);
-  method Vector#(8, Bit#(1)) out();
+  method Action in(Vector#(6, SBit) in_);
+  method Vector#(8, SBit) out();
 endinterface
 
 typedef UInt#(6) DType; // 1 bit for Maybe(invalid)
@@ -52,7 +54,7 @@ module mkPICAMTop(TopIfc);
   endrule
   
   rule read_return if (state == READ_RETURN);
-    Vector#(8, Bit#(1)) out_ = unpack({1'b0, pack(ret_r)});
+    Vector#(8, Bit#(1)) out_ = unpack({1'b1, pack(ret_r)});
     output_w <= out_;
   endrule
 
