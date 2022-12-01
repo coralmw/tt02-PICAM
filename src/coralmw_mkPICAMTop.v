@@ -7,7 +7,7 @@ module coralmw_mkPICAMTop (
    );
 
     // instantiate the DUT
-    coralmw_mkPICAMInternal #(.MAX_COUNT(100)) int(
+    coralmw_mkPICAMInternal internal(
         .clock  (io_in[7]),
         .reset  (io_in[6]),
         .in_in_ (io_in[5:0]),

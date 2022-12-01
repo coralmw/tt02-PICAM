@@ -5,8 +5,8 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 
-VERILOG_SOURCES += $(PWD)/tb.v $(PWD)/counter.v $(PWD)/decoder.v
-
+VERILOG_SOURCES += $(PWD)/tb.v $(PWD)/coralmw_mkPICAMTop.v $(PWD)/coralmw_mkPICAMInternal.v
+ 
 # TOPLEVEL is the name of the toplevel module in your Verilog or VHDL file
 TOPLEVEL = tb
 

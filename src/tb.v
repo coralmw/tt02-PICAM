@@ -27,7 +27,7 @@ module tb (
     assign segments = outputs[6:0];
 
     // instantiate the DUT
-    coralmw_mkPICAMTop #(.MAX_COUNT(100)) DUT(
+    coralmw_mkPICAMTop DUT(
         .io_in  (inputs),
         .io_out (outputs)
         );
